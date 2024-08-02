@@ -1,0 +1,640 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(27, 171, 254);
+    --background-color: rgb(1, 34, 53);
+    --card-color: #ffffff;
+    /* #efefef; */
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.card {
+    background-color: var(--card-color);
+}
+
+.navbar {
+    background-color: var(--card-color) !important;
+    border-radius: 5px;
+}
+
+#logo-navbar {
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 0 20px #00000080;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#logo-navbar:hover {
+    cursor: pointer;
+}
+
+.navbar-brand span {
+    height: 100px;
+    font-size: 36px;
+    box-shadow: 0 0 20px #00000080;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+    font-weight: 600 !important;
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+nav .opcoes {
+    margin: 2rem auto 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav .opcoes a {
+    padding: 5px;
+    text-decoration: none;
+    color: #000 !important;
+    box-shadow: 0 0 5px #00000080;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    transition: .5s;
+}
+
+nav .opcoes a:hover {
+    font-size: 18px;
+}
+
+
+.img-ampliada {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}
+
+.img-ampliada #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    z-index: 5;
+}
+
+.img-ampliada #img-ampliada {
+    position: fixed;
+    z-index: 10;
+    max-width: 80%;
+    max-height: 80%;
+    padding: 5px;
+    box-shadow: 0 0 5px #00000080;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    border: 5px solid var(--primary-color);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #000;
+    z-index: 10;
+    transition: .5s;
+}
+
+.close:hover {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: #000
+}
+
+.navbar, .infos-pessoais, .escolaridade, .experiencia-profissional, .cursos-e-certificacoes, .habilidades {
+    margin: 1.5rem;
+}
+
+.card-text {
+    padding-top: 0 !important; 
+}
+
+.infos-pessoais p, .sect-list, .cursos-e-certificacoes p, .card-text {
+    font-size: 18px;
+    color: #000
+}
+
+.infos-pessoais table {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+
+
+.infos-pessoais table tr th  {
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.infos-pessoais table tr td  {
+    padding: 5px;
+    text-align: center;
+}
+
+.sect-list span {
+    font-weight: 500;
+}
+
+#carouselExampleIndicators {
+    width: 50%;
+    border: 3px solid #000;
+    border-radius: 3px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon, .carousel-indicators {
+    background-color: #00000080;
+    box-shadow: 0 0 5px #000000;
+}
+
+.buttons-habilidades {
+    margin: 2px;   
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.allButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#button-html { background-color: #ec6231; }
+#button-html:hover { box-shadow: 0 0 1rem #ec6331; padding:.6rem  1.1rem; }
+
+#button-css { background-color: #264de4; }
+#button-css:hover { box-shadow: 0 0 1rem #264de4; padding:.6rem  1.1rem; }
+
+#button-js { background-color: #f7df1e; }
+#button-js:hover { box-shadow: 0 0 1rem #f7df1e; padding:.6rem  1.1rem; }
+
+#button-ts { background-color: #3178c6; }
+#button-ts:hover { box-shadow: 0 0 1rem #3178c6; padding:.6rem  1.1rem; }
+
+#button-git { background-color: #f05033; }
+#button-git:hover { box-shadow: 0 0 1rem #f05033; padding:.6rem  1.1rem; }
+
+#button-github { background-color: #17151580; }
+#button-github:hover { box-shadow: 0 0 1rem #17151580; padding:.6rem  1.1rem; }
+
+#button-sass { background-color: #c69; }
+#button-sass:hover { box-shadow: 0 0 1rem #c69; padding:.6rem  1.1rem; }
+
+#button-bootstrap { background-color: #7e0af9; }
+#button-bootstrap:hover { box-shadow: 0 0 1rem #7e0af9; padding:.6rem  1.1rem; }
+
+#button-react { background-color: #61dbfb; }
+#button-react:hover { box-shadow: 0 0 1rem #61dbfb; padding:.6rem  1.1rem; }
+
+#button-nodejs { background-color: #3c873a; }
+#button-nodejs:hover { box-shadow: 0 0 1rem #3c873a; padding:.6rem  1.1rem; }
+
+#rodape {
+    padding: 1rem;
+    background-color: #000;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Responsividade */
+
+@media (max-width: 920px)  {
+
+    .infos-pessoais p, .sect-list, .cursos-e-certificacoes p, .card-text, .infos-pessoais table tr td, .infos-pessoais table th, .buttons-habilidades, #rodape {
+        font-size: 14px;
+    }
+
+    .card-header {
+        font-size: 16px;
+    }
+
+    #logo-navbar {
+        height: 75px;
+        width: 75px;
+    }
+        
+    .navbar-brand span {
+        height: 70px;
+        font-size: 28px;
+        padding: 1rem;
+    }
+    
+    nav .opcoes {
+        margin: 1.5rem auto .5rem;
+        gap: .5rem;
+    }
+
+    nav .opcoes a {
+        margin: 2px;
+        font-size: 14px;
+    }
+
+    nav .opcoes a:hover {
+        font-size: 16px;
+    }
+    
+    #button-html:hover { box-shadow: 0 0 1rem #ec6331; padding: .5rem  1rem; }
+    #button-css:hover { box-shadow: 0 0 1rem #264de4;  padding: .5rem  1rem; }
+    #button-js:hover { box-shadow: 0 0 1rem #f7df1e;  padding: .5rem  1rem;  }
+    #button-ts:hover { box-shadow: 0 0 1rem #3178c6;  padding: .5rem  1rem;  }
+    #button-git:hover { box-shadow: 0 0 1rem #f05033;  padding: .5rem  1rem;  }
+    #button-github:hover { box-shadow: 0 0 1rem #17151580;  padding: .5rem  1rem;  }
+    #button-sass:hover { box-shadow: 0 0 1rem #c69;  padding: .5rem  1rem;  }
+    #button-bootstrap:hover { box-shadow: 0 0 1rem #7e0af9;  padding: .5rem  1rem;  }
+    #button-react:hover { box-shadow: 0 0 1rem #61dbfb;  padding: .5rem  1rem;  }
+    #button-nodejs:hover { box-shadow: 0 0 1rem #3c873a;  padding: .5rem  1rem;  }
+
+    .buttons-habilidades {
+        margin: 2px;   
+        border: 1px solid #000;
+        text-decoration: none;
+        color: #000;
+        border-radius: 4px;
+        padding: 5px 10px;
+        font-weight: 500;
+        transition: .5s;
+    }
+}
+
+@media (max-width: 785px)  {
+
+    .infos-pessoais p, .sect-list, .cursos-e-certificacoes p, .card-text, .infos-pessoais table tr td, .infos-pessoais table th, .buttons-habilidades, #rodape, .opcoes a {
+        font-size: 12px !important;
+    }
+
+    .card-header {
+        font-size: 14px;
+    }
+
+    #logo-navbar {
+        height: 60px;
+        width: 60px;
+    }
+        
+    .navbar-brand span {
+        height: 60px;
+        font-size: 18px;
+        padding: 1rem;
+    }
+    
+    nav .opcoes {
+        margin: 1.5rem auto .5rem;
+        gap: .5rem;
+    }
+
+    nav .opcoes a {
+        margin: 2px;
+        font-size: 10px;
+    }
+
+    nav .opcoes a:hover {
+        font-size: 12px;
+    }
+
+    #button-html:hover { box-shadow: 0 0 1rem #ec6331; padding: .4rem  .9rem; }
+    #button-css:hover { box-shadow: 0 0 1rem #264de4;  padding: .4rem  .9rem; }
+    #button-js:hover { box-shadow: 0 0 1rem #f7df1e;  padding: .4rem  .9rem;  }
+    #button-ts:hover { box-shadow: 0 0 1rem #3178c6;  padding: .4rem  .9rem;  }
+    #button-git:hover { box-shadow: 0 0 1rem #f05033;  padding: .4rem  .9rem;  }
+    #button-github:hover { box-shadow: 0 0 1rem #17151580;  padding: .4rem  .9rem;  }
+    #button-sass:hover { box-shadow: 0 0 1rem #c69;  padding: .4rem  .9rem;  }
+    #button-bootstrap:hover { box-shadow: 0 0 1rem #7e0af9;  padding: .4rem  .9rem;  }
+    #button-react:hover { box-shadow: 0 0 1rem #61dbfb;  padding: .4rem  .9rem;  }
+    #button-nodejs:hover { box-shadow: 0 0 1rem #3c873a;  padding: .4rem  .9rem;  }
+
+    .buttons-habilidades {
+        margin: 2px;   
+        border: 1px solid #000;
+        text-decoration: none;
+        color: #000;
+        border-radius: 4px;
+        padding: 5px 10px;
+        font-weight: 500;
+        transition: .5s;
+    }
+}
+
+@media (max-width: 600px)  {
+
+    .infos-pessoais p, .sect-list, .cursos-e-certificacoes p, .card-text, .infos-pessoais table tr td, .infos-pessoais table th, .buttons-habilidades, #rodape, .opcoes a {
+        font-size: 12px !important;
+    }
+
+    .card-header {
+        font-size: 14px;
+    }
+
+    #logo-navbar {
+        height: 60px;
+        width: 60px;
+    }
+        
+    .navbar-brand span {
+        height: 60px;
+        font-size: 18px;
+        padding: 1rem;
+    }
+    
+    nav .opcoes {
+        margin: 1.5rem auto .5rem;
+        gap: .5rem;
+    }
+
+    nav .opcoes a {
+        margin: 2px;
+        font-size: 10px;
+    }
+
+    nav .opcoes a:hover {
+        font-size: 12px;
+    }
+
+    #button-html:hover { box-shadow: 0 0 1rem #ec6331; padding: .4rem  .9rem; }
+    #button-css:hover { box-shadow: 0 0 1rem #264de4;  padding: .4rem  .9rem; }
+    #button-js:hover { box-shadow: 0 0 1rem #f7df1e;  padding: .4rem  .9rem;  }
+    #button-ts:hover { box-shadow: 0 0 1rem #3178c6;  padding: .4rem  .9rem;  }
+    #button-git:hover { box-shadow: 0 0 1rem #f05033;  padding: .4rem  .9rem;  }
+    #button-github:hover { box-shadow: 0 0 1rem #17151580;  padding: .4rem  .9rem;  }
+    #button-sass:hover { box-shadow: 0 0 1rem #c69;  padding: .4rem  .9rem;  }
+    #button-bootstrap:hover { box-shadow: 0 0 1rem #7e0af9;  padding: .4rem  .9rem;  }
+    #button-react:hover { box-shadow: 0 0 1rem #61dbfb;  padding: .4rem  .9rem;  }
+    #button-nodejs:hover { box-shadow: 0 0 1rem #3c873a;  padding: .4rem  .9rem;  }
+
+    .buttons-habilidades {
+        margin: 2px;   
+        border: 1px solid #000;
+        text-decoration: none;
+        color: #000;
+        border-radius: 4px;
+        padding: 5px 10px;
+        font-weight: 500;
+        transition: .5s;
+    }
+}
+
+@media (max-width: 550px)  {
+
+    .infos-pessoais p, .sect-list, .cursos-e-certificacoes p, .card-text, .infos-pessoais table tr td, .infos-pessoais table th, .buttons-habilidades, #rodape, .opcoes a {
+        font-size: 10px !important;
+    }
+
+    .card-header {
+        font-size: 12px;
+    }
+
+    #logo-navbar {
+        height: 50px;
+        width: 50px;
+    }
+        
+    .navbar-brand span {
+        height: 50px;
+        font-size: 16px;
+        padding: .7rem;
+    }
+    
+    nav .opcoes {
+        margin: 1.5rem auto .5rem;
+        gap: .5rem;
+    }
+
+    nav .opcoes a {
+        margin: 2px;
+        font-size: 10px;
+    }
+
+    nav .opcoes a:hover {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 450px)  {
+
+    .infos-pessoais p, .sect-list, .cursos-e-certificacoes p, .card-text, .infos-pessoais table tr td, .infos-pessoais table th, .buttons-habilidades, #rodape, .opcoes a {
+        font-size: 10px !important;
+    }
+
+    .card-header {
+        font-size: 12px;
+    }
+
+    #logo-navbar {
+        height: 40px;
+        width: 40px;
+    }
+        
+    .navbar-brand span {
+        height: 40px;
+        font-size: 14px;
+        padding: .7rem;
+    }
+    
+    nav .opcoes {
+        margin: 1.5rem auto .5rem;
+        gap: .5rem;
+    }
+
+    nav .opcoes a {
+        margin: 2px;
+        font-size: 10px;
+    }
+
+    nav .opcoes a:hover {
+        font-size: 12px;
+    }
+
+    #button-html:hover { box-shadow: 0 0 1rem #ec6331; padding: .3rem  .7rem; }
+    #button-css:hover { box-shadow: 0 0 1rem #264de4;  padding: .3rem  .7rem; }
+    #button-js:hover { box-shadow: 0 0 1rem #f7df1e;  padding: .3rem  .7rem;  }
+    #button-ts:hover { box-shadow: 0 0 1rem #3178c6;  padding: .3rem  .7rem;  }
+    #button-git:hover { box-shadow: 0 0 1rem #f05033;  padding: .3rem  .7rem;  }
+    #button-github:hover { box-shadow: 0 0 1rem #17151580;  padding: .3rem  .7rem;  }
+    #button-sass:hover { box-shadow: 0 0 1rem #c69;  padding: .3rem  .7rem;  }
+    #button-bootstrap:hover { box-shadow: 0 0 1rem #7e0af9;  padding: .3rem  .7rem;  }
+    #button-react:hover { box-shadow: 0 0 1rem #61dbfb;  padding: .3rem  .7rem;  }
+    #button-nodejs:hover { box-shadow: 0 0 1rem #3c873a;  padding: .3rem  .7rem;  }
+}
+
+@media (max-width: 450px)  {
+
+    .infos-pessoais p, .sect-list, .cursos-e-certificacoes p, .card-text, .infos-pessoais table tr td, .infos-pessoais table th, .buttons-habilidades, #rodape, .opcoes a {
+        font-size: 10px !important;
+    }
+
+    .card-header {
+        font-size: 12px;
+    }
+
+    #logo-navbar {
+        height: 40px;
+        width: 40px;
+    }
+        
+    .navbar-brand span {
+        height: 40px;
+        font-size: 14px;
+        padding: .7rem;
+    }
+    
+    nav .opcoes {
+        margin: 1.5rem auto .5rem;
+        gap: .5rem;
+    }
+
+    nav .opcoes a {
+        margin: 2px;
+        font-size: 10px;
+    }
+
+    nav .opcoes a:hover {
+        font-size: 12px;
+    }
+
+    #button-html:hover { box-shadow: 0 0 1rem #ec6331; padding: .3rem  .7rem; }
+    #button-css:hover { box-shadow: 0 0 1rem #264de4;  padding: .3rem  .7rem; }
+    #button-js:hover { box-shadow: 0 0 1rem #f7df1e;  padding: .3rem  .7rem;  }
+    #button-ts:hover { box-shadow: 0 0 1rem #3178c6;  padding: .3rem  .7rem;  }
+    #button-git:hover { box-shadow: 0 0 1rem #f05033;  padding: .3rem  .7rem;  }
+    #button-github:hover { box-shadow: 0 0 1rem #17151580;  padding: .3rem  .7rem;  }
+    #button-sass:hover { box-shadow: 0 0 1rem #c69;  padding: .3rem  .7rem;  }
+    #button-bootstrap:hover { box-shadow: 0 0 1rem #7e0af9;  padding: .3rem  .7rem;  }
+    #button-react:hover { box-shadow: 0 0 1rem #61dbfb;  padding: .3rem  .7rem;  }
+    #button-nodejs:hover { box-shadow: 0 0 1rem #3c873a;  padding: .3rem  .7rem;  }
+
+    .buttons-habilidades {
+        font-size: 8px !important;
+    }
+}
+
+@media (max-width: 400px)  {
+
+    .infos-pessoais p, .sect-list, .cursos-e-certificacoes p, .card-text, .infos-pessoais table tr td, .infos-pessoais table th, .buttons-habilidades, #rodape, .opcoes a {
+        font-size: 10px !important;
+    }
+
+    .infos-pessoais table tr td {
+        font-size: 8px !important;
+    }
+
+    .card-header {
+        font-size: 12px;
+    }
+
+    #logo-navbar {
+        height: 60px;
+        width: 60px;
+    }
+
+    .navbar-brand {
+        display: flex;
+        flex-direction: column;
+    }
+        
+    .navbar-brand span {
+        height: 40px;
+        font-size: 12px;
+        padding: .7rem;
+    }
+    
+    nav .opcoes {
+        margin: .5rem auto .5rem;
+        gap: .2rem;
+    }
+
+    nav .opcoes a {
+        margin: 2px;
+        font-size: 10px;
+    }
+
+    nav .opcoes a:hover {
+        font-size: 12px;
+    }
+
+    .buttons-habilidades {
+        font-size: 8px !important;
+    }
+}
+
+@media (max-width: 305px)  {
+
+    .infos-pessoais p, .sect-list, .cursos-e-certificacoes p, .card-text, .infos-pessoais table tr td, .infos-pessoais table th, .buttons-habilidades, #rodape, .opcoes a {
+        font-size: 7.5px !important;
+    }
+
+    .infos-pessoais table tr td, .infos-pessoais table th {
+        font-size: 4.5px !important;
+    }
+
+    .card-header {
+        font-size: 10px;
+    }
+
+    #logo-navbar {
+        height: 60px;
+        width: 60px;
+    }
+        
+    .navbar-brand span {
+        height: 30px;
+        font-size: 7.5px;
+        padding: .4rem;
+    }
+    
+    nav .opcoes {
+        margin: .5rem auto .5rem;
+        gap: .2rem;
+    }
+
+    nav .opcoes a {
+        margin: 2px;
+        font-size: 10px;
+    }
+
+    nav .opcoes a:hover {
+        font-size: 12px;
+    }
+
+    .buttons-habilidades {
+        font-size: 6px !important;
+    }
+}
